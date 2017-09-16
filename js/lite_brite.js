@@ -24,7 +24,7 @@ function main() {
     
     // selects boxes and changes their color:   
     $('.box').on('click', function () {
-        $(this).toggleClass('colorClass');
+        $(this).toggleClass(colorClass);
     });
 }
 
