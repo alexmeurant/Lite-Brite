@@ -1,8 +1,8 @@
 function main() {
-    
+
     // holds the color in a variable:
     let colorClass = '';
-    
+
     // selects the color:   
     $('.select-color').on('click', function () {
 
@@ -24,27 +24,25 @@ function main() {
         // Displays selected color:
         $(this).removeClass("not-selected");
         $(this).siblings().addClass('not-selected');
-
-        // selects boxes and changes their color:   
-        $('.box').on('click', function () {
-            $(this).toggleClass(colorClass);
-        });
-
-        // blinks selected boxes:
-        $('.toggle-blink').on('click', function () {
-            // checks if boxes are colored:
-            if (colorClass) {
-                // blink block is lighted up:
-                $(this).toggleClass('opacity');
-            }
-            // blinks selected boxes:
-            setInterval(function () {
-                $('.box.cyan, .box.yellow, .box.magenta').toggleClass('blink');
-            }, 350);
-        });
     });
 
+    // selects boxes and changes their color:   
+    $('.box').on('click', function () {
+        $(this).toggleClass(colorClass);
+    });
 
+    // blinks selected boxes:
+    $('.toggle-blink').on('click', function () {
+        // checks if boxes are colored:
+        if (colorClass) {
+            // blink block is lighted up:
+            $(this).toggleClass('opacity');
+        }
+        // blinks selected boxes:
+        setInterval(function () {
+            $('.box.cyan, .box.yellow, .box.magenta').toggleClass('blink');
+        }, 350);
+    });
 }
 
 $(document).ready(main);
