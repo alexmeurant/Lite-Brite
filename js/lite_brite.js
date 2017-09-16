@@ -1,10 +1,13 @@
+// holds the color in a variable:
+let colorClass = '';
+
 function main() {
+
     // selects the color:   
     $('.select-color').on('click', function () {
+
         // gets the element's class:
         let selectedColor = $(this).attr('class');
-        // holds the color in a variable:
-        let colorClass = '';
 
         // checks the selected color block and gives color to boxes:
         if (selectedColor === "select-color cyan not-selected") {
@@ -17,6 +20,7 @@ function main() {
             colorClass = "magenta";
             $('.box').css('color', '#ff2f9e');
         }
+
         // Displays selected color:
         $(this).removeClass("not-selected");
         $(this).siblings().addClass('not-selected');
