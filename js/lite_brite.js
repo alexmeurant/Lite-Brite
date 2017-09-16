@@ -25,6 +25,21 @@ function main() {
         $('.box').on('click', function () {
             $(this).toggleClass(colorClass);
         });
+
+        // blinks selected boxes:
+        $('.toggle-blink').on('click', function () {
+            // checks if boxes are colored:
+            if (colorClass) {
+                // blink block is lighted up:
+                $(this).toggleClass('opacity');
+            }
+            // blinks selected boxes:
+            setInterval(function () {
+                $('.box.cyan').toggleClass('blink');
+                $('.box.yellow').toggleClass('blink');
+                $('.box.magenta').toggleClass('blink');
+            }, 350);
+        });
     });
 
 
