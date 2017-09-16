@@ -1,8 +1,8 @@
-// holds the color in a variable:
-let colorClass = '';
-
 function main() {
-
+    
+    // holds the color in a variable:
+    let colorClass = '';
+    
     // selects the color:   
     $('.select-color').on('click', function () {
 
