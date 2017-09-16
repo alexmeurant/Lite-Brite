@@ -35,9 +35,7 @@ function main() {
             }
             // blinks selected boxes:
             setInterval(function () {
-                $('.box.cyan').toggleClass('blink');
-                $('.box.yellow').toggleClass('blink');
-                $('.box.magenta').toggleClass('blink');
+                $('.box.cyan, .box.yellow, .box.magenta').toggleClass('blink');
             }, 350);
         });
     });
